@@ -1,0 +1,290 @@
+// $primaryColor: #ef9d1c;
+$primaryColor: #282828;
+$primaryInvert: invert($primaryColor);
+// $secondaryColor: #949494;
+$secondaryColor: white;
+$accentColor: #97743A;
+
+//total war colors
+//#97743A - brown accent
+//#282828 - black / dark for nav 
+
+html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Bookman";
+}
+
+body {
+  background-color: $secondaryColor;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+
+a {
+  border:$accentColor 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: $secondaryColor;
+  text-decoration: none;
+  color: black;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
+h3{
+  margin: 3vh 0 0 0;
+  border-bottom: solid 3px $accentColor;
+}
+
+section {
+  border-top: solid 1px $primaryColor;
+  border-left: solid 1px $primaryColor;
+  border-right: solid 1px $primaryColor;
+  border-bottom: solid 5px $accentColor;
+  margin-top: 10vh;
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+}
+
+
+// header {
+//   display: flex;
+//   justify-content: center;
+//   background-color: $primaryColor;
+//   position: fixed;
+//   top: 0vh;
+//   width: 100vw;
+//   z-index: 1;
+//   height: 12vh;
+//   padding-bottom: 1vh;
+// }
+
+
+
+nav {
+  background-color: $primaryColor;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  border: solid 1vh;
+  border-color: $primaryColor;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 2;
+  padding: 1vh 0;
+  div{
+    h1{
+      color: $secondaryColor;
+      border-bottom: solid 3px $accentColor;
+    }
+  }
+  div{
+    #header-buttons{
+      display: flex;
+      flex-wrap: wrap;
+      a{
+        margin-top: 2px;
+        &:hover {
+          background-color: $accentColor;
+        }
+      }
+    }
+  }
+}
+
+.section-title{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primaryColor;
+  
+}
+
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 20vh;
+  bottom: 15vh;
+}
+
+
+#about-me{
+  // border-color: ;
+  margin-top: 20vh;
+  width: 90vw;
+  
+    p{
+      padding: 5vh 0;
+      max-width: 80vw;
+      font-size: larger;
+      
+    }
+}
+
+
+#technologies {
+  display: flex;
+  #all-skills {
+    display: flex;
+    flex-direction: column;
+    #technologies-list-container{
+      width: 80vw;
+      display:flex;
+      flex-direction: column;
+      #technologies-list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .tech-icon {
+          list-style-type: none;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+          max-height: 10vh;
+          max-width: 30vw;
+          font-size: 16px;
+          padding: 4px 8px;
+          margin: 5px;
+          color: #000;
+          .tech-image {
+            max-width: 30vw;
+            max-height: 10vh;
+            }
+          }
+        }
+      }
+      #soft-container {
+        display: flex;
+        flex-direction: column;
+        #soft-skills-container {
+          display: flex;
+          #soft-skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            list-style-type: none;
+            .soft-icon {
+              list-style-type: none;
+            }
+    }
+  }
+  }
+  }
+}
+
+
+
+#portfolio {
+
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5vh;
+
+  #projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 80vw;
+      
+    .project {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin: 5vh 0;
+          
+      .project-text {
+        margin: 0 1vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .external-links{
+          display: flex;
+        }
+      }
+      .project-image {
+        max-width: 50vw;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+footer{
+  bottom: 0;
+  left: 0;
+  height: 10vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  background-color: $primaryColor;
+  color: $secondaryColor;
+  
+  #contact{
+    display: flex;
+    flex-direction: column;
+    background-color: $primaryColor;
+    .section-title{
+      color: $secondaryColor;
+    }
+    
+    #footer-icon-container{
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+
+      #footer-icon-email{
+        min-height: 20px;
+        min-width: 20px;
+        background-image: url(images/icons/email.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 5px;
+        background-color: $secondaryColor;
+
+      }
+      #footer-icon-linked{
+        min-height: 20px;
+        min-width: 20px;
+        background-image: url(images/icons/linked-in.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 5px;
+        background-color: none;
+      }
+    }
+  }
+}
+
+
+@font-face {
+  font-family: 'Star Jedi';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../Fonts/star-jedi.woff') format('woff');
+}
+
+#star-wars {
+  font-family: 'Star Jedi', arial;
+}
