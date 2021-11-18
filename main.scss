@@ -5,16 +5,17 @@ $primaryInvert: invert($primaryColor);
 $secondaryColor: white;
 $accentColor: #97743A;
 
+
 //total war colors
 //#97743A - brown accent
 //#282828 - black / dark for nav 
 
-html {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-family: "Bookman";
-}
+// html {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   font-family: "Bookman";
+// }
 
 body {
   background-color: $secondaryColor;
@@ -24,17 +25,16 @@ body {
   
 }
 
-
-a {
-  border:$accentColor 2px solid;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 0 5px;
-  background-color: $secondaryColor;
-  text-decoration: none;
-  color: black;
-  box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  top: 20vh;
+  bottom: 15vh;
 }
+
+
+
 
 h3{
   margin: 3vh 0 0 0;
@@ -91,16 +91,35 @@ nav {
     h1{
       color: $secondaryColor;
       border-bottom: solid 3px $accentColor;
+      font-size: xx-large;
     }
   }
   div{
     #header-buttons{
       display: flex;
       flex-wrap: wrap;
+      align-items: center;
+      color: $secondaryColor;
+      font-size: larger;
+      p{
+        margin: 0 6px;
+      }
       a{
-        margin-top: 2px;
+        color: $secondaryColor;
+        // margin-top: 2px;
+        border-bottom: solid 3px $accentColor;
+        border-radius: none;
+        padding: 0px;
+        margin: none;
+        background-color: none;
+        text-decoration: none;
+        box-shadow: none;
         &:hover {
           background-color: $accentColor;
+          padding: 5px 0px 6px;
+          border-radius: 2px;
+          border: solid 2px $accentColor;
+          
         }
       }
     }
@@ -112,17 +131,12 @@ nav {
   align-items: center;
   justify-content: center;
   color: $primaryColor;
-  
+  width: 80vw;
+  padding-bottom: 10px;
 }
 
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  top: 20vh;
-  bottom: 15vh;
-}
+
 
 
 #about-me{
@@ -131,7 +145,7 @@ main {
   width: 90vw;
   
     p{
-      padding: 5vh 0;
+      padding: 4vh 0;
       max-width: 80vw;
       font-size: larger;
       
@@ -141,9 +155,11 @@ main {
 
 #technologies {
   display: flex;
+  
   #all-skills {
     display: flex;
     flex-direction: column;
+    align-items: center;
     #technologies-list-container{
       width: 80vw;
       display:flex;
@@ -152,6 +168,7 @@ main {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+        padding: 4vh 0;
         .tech-icon {
           list-style-type: none;
           flex-direction: column;
@@ -176,6 +193,9 @@ main {
         flex-direction: column;
         #soft-skills-container {
           display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
           #soft-skills-list {
             display: flex;
             flex-wrap: wrap;
@@ -183,6 +203,9 @@ main {
             list-style-type: none;
             .soft-icon {
               list-style-type: none;
+              margin: 20px;
+              border-bottom: $accentColor 2px solid;
+              font-size: larger;
             }
     }
   }
@@ -202,16 +225,29 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-width: 80vw;
-      
+    width: 80vw;
+    a {
+      border: $accentColor 2px solid;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 0 5px;
+      background-color: $secondaryColor;
+      text-decoration: none;
+      color: black;
+      box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+    }
+    .project:last-of-type{
+      border-bottom: none;
+    }
     .project {
       display: flex;
       flex-direction: row;
       align-items: center;
-      margin: 5vh 0;
-          
+      // margin: 4vh 0;
+      padding: 4vh 0;
+      border-bottom: solid 3px $accentColor;
       .project-text {
-        margin: 0 1vw;
+        margin: 0 3vw;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -239,20 +275,25 @@ footer{
   
   #contact{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     background-color: $primaryColor;
+    justify-content: center;
+    align-items: flex-end;
+
     .section-title{
       color: $secondaryColor;
+      border: none;
     }
     
     #footer-icon-container{
       display: flex;
       flex-direction: row;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      width: 15vw;
 
 
       #footer-icon-email{
+        display: flex;
         min-height: 20px;
         min-width: 20px;
         background-image: url(images/icons/email.png);
@@ -261,9 +302,11 @@ footer{
         background-position: center;
         padding: 5px;
         background-color: $secondaryColor;
+        margin: 0 5px;
 
       }
       #footer-icon-linked{
+        display: flex;
         min-height: 20px;
         min-width: 20px;
         background-image: url(images/icons/linked-in.png);
@@ -272,8 +315,12 @@ footer{
         background-position: center;
         padding: 5px;
         background-color: none;
+        margin: 0 5px 0 15px;
       }
     }
+  }
+  .footer-spacer{
+    margin-left: 5vw;
   }
 }
 

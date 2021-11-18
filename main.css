@@ -1,17 +1,3 @@
-html {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-family: "Bookman";
-}
-
 body {
   background-color: white;
   display: -webkit-box;
@@ -26,16 +12,19 @@ body {
           justify-content: center;
 }
 
-a {
-  border: #97743A 2px solid;
-  border-radius: 5px;
-  padding: 10px;
-  margin: 0 5px;
-  background-color: white;
-  text-decoration: none;
-  color: black;
-  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 20vh;
+  bottom: 15vh;
 }
 
 h3 {
@@ -98,6 +87,7 @@ nav {
 nav div h1 {
   color: white;
   border-bottom: solid 3px #97743A;
+  font-size: xx-large;
 }
 
 nav div #header-buttons {
@@ -106,14 +96,34 @@ nav div #header-buttons {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  font-size: larger;
+}
+
+nav div #header-buttons p {
+  margin: 0 6px;
 }
 
 nav div #header-buttons a {
-  margin-top: 2px;
+  color: white;
+  border-bottom: solid 3px #97743A;
+  border-radius: none;
+  padding: 0px;
+  margin: none;
+  background-color: none;
+  text-decoration: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 nav div #header-buttons a:hover {
   background-color: #97743A;
+  padding: 5px 0px 6px;
+  border-radius: 2px;
+  border: solid 2px #97743A;
 }
 
 .section-title {
@@ -127,21 +137,8 @@ nav div #header-buttons a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   color: #282828;
-}
-
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  top: 20vh;
-  bottom: 15vh;
+  width: 80vw;
+  padding-bottom: 10px;
 }
 
 #about-me {
@@ -150,7 +147,7 @@ main {
 }
 
 #about-me p {
-  padding: 5vh 0;
+  padding: 4vh 0;
   max-width: 80vw;
   font-size: larger;
 }
@@ -169,6 +166,9 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #technologies #all-skills #technologies-list-container {
@@ -191,6 +191,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 4vh 0;
 }
 
 #technologies #all-skills #technologies-list-container #technologies-list .tech-icon {
@@ -233,6 +234,14 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #technologies #all-skills #soft-container #soft-skills-container #soft-skills-list {
@@ -250,6 +259,9 @@ main {
 
 #technologies #all-skills #soft-container #soft-skills-container #soft-skills-list .soft-icon {
   list-style-type: none;
+  margin: 20px;
+  border-bottom: #97743A 2px solid;
+  font-size: larger;
 }
 
 #portfolio {
@@ -273,7 +285,23 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 80vw;
+  width: 80vw;
+}
+
+#portfolio #projects a {
+  border: #97743A 2px solid;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 5px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#portfolio #projects .project:last-of-type {
+  border-bottom: none;
 }
 
 #portfolio #projects .project {
@@ -287,11 +315,12 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 5vh 0;
+  padding: 4vh 0;
+  border-bottom: solid 3px #97743A;
 }
 
 #portfolio #projects .project .project-text {
-  margin: 0 1vw;
+  margin: 0 3vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -335,15 +364,22 @@ footer #contact {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   background-color: #282828;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 footer #contact .section-title {
   color: white;
+  border: none;
 }
 
 footer #contact #footer-icon-container {
@@ -354,15 +390,16 @@ footer #contact #footer-icon-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 15vw;
 }
 
 footer #contact #footer-icon-container #footer-icon-email {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 20px;
   min-width: 20px;
   background-image: url(images/icons/email.png);
@@ -371,9 +408,13 @@ footer #contact #footer-icon-container #footer-icon-email {
   background-position: center;
   padding: 5px;
   background-color: white;
+  margin: 0 5px;
 }
 
 footer #contact #footer-icon-container #footer-icon-linked {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   min-height: 20px;
   min-width: 20px;
   background-image: url(images/icons/linked-in.png);
@@ -382,6 +423,11 @@ footer #contact #footer-icon-container #footer-icon-linked {
   background-position: center;
   padding: 5px;
   background-color: none;
+  margin: 0 5px 0 15px;
+}
+
+footer .footer-spacer {
+  margin-left: 5vw;
 }
 
 @font-face {
