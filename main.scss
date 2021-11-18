@@ -6,23 +6,14 @@ $secondaryColor: white;
 $accentColor: #97743A;
 
 
-//total war colors
-//#97743A - brown accent
-//#282828 - black / dark for nav 
 
-// html {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   font-family: "Bookman";
-// }
 
 body {
   background-color: $secondaryColor;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  
+  margin: 0px;
 }
 
 main {
@@ -33,6 +24,9 @@ main {
   bottom: 15vh;
 }
 
+ul{
+  padding-inline-start: 0;
+}
 
 
 
@@ -58,20 +52,6 @@ section {
 }
 
 
-// header {
-//   display: flex;
-//   justify-content: center;
-//   background-color: $primaryColor;
-//   position: fixed;
-//   top: 0vh;
-//   width: 100vw;
-//   z-index: 1;
-//   height: 12vh;
-//   padding-bottom: 1vh;
-// }
-
-
-
 nav {
   background-color: $primaryColor;
   display: flex;
@@ -88,6 +68,7 @@ nav {
   z-index: 2;
   padding: 1vh 0;
   div{
+
     h1{
       color: $secondaryColor;
       border-bottom: solid 3px $accentColor;
@@ -95,6 +76,7 @@ nav {
     }
   }
   div{
+
     #header-buttons{
       display: flex;
       flex-wrap: wrap;
@@ -104,9 +86,9 @@ nav {
       p{
         margin: 0 6px;
       }
+
       a{
         color: $secondaryColor;
-        // margin-top: 2px;
         border-bottom: solid 3px $accentColor;
         border-radius: none;
         padding: 0px;
@@ -114,11 +96,13 @@ nav {
         background-color: none;
         text-decoration: none;
         box-shadow: none;
+
         &:hover {
           background-color: $accentColor;
           padding: 5px 0px 6px;
           border-radius: 2px;
           border: solid 2px $accentColor;
+          
           
         }
       }
@@ -140,16 +124,15 @@ nav {
 
 
 #about-me{
-  // border-color: ;
   margin-top: 20vh;
   width: 90vw;
   
-    p{
-      padding: 4vh 0;
-      max-width: 80vw;
-      font-size: larger;
+  p{
+    padding: 4vh 0;
+    max-width: 80vw;
+    font-size: larger;
       
-    }
+  }
 }
 
 
@@ -160,63 +143,69 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+
     #technologies-list-container{
       width: 80vw;
       display:flex;
       flex-direction: column;
+
       #technologies-list{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         padding: 4vh 0;
+
         .tech-icon {
           list-style-type: none;
           flex-direction: column;
           justify-content: center;
           align-items: center;
           text-align: center;
-          max-height: 10vh;
-          max-width: 30vw;
-          font-size: 16px;
+          width: 100px;
           padding: 4px 8px;
           margin: 5px;
-          color: #000;
+
           .tech-image {
-            max-width: 30vw;
-            max-height: 10vh;
+            width: 100px;
             }
           }
         }
       }
+
       #soft-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+
         #soft-skills-container {
           display: flex;
           flex-wrap: wrap;
           justify-content: center;
           align-items: center;
+
           #soft-skills-list {
             display: flex;
             flex-wrap: wrap;
-            flex-direction: row;
             list-style-type: none;
+            justify-content: space-evenly;
+            padding-inline-start: 0;
             .soft-icon {
               list-style-type: none;
-              margin: 20px;
+              margin: 10px;
               border-bottom: $accentColor 2px solid;
               font-size: larger;
             }
-    }
-  }
-  }
+          }
+        }
+      }
   }
 }
 
 
 
 #portfolio {
-
   display: flex;
   justify-content: center;
   margin-bottom: 5vh;
@@ -226,6 +215,7 @@ nav {
     flex-direction: column;
     align-items: center;
     width: 80vw;
+
     a {
       border: $accentColor 2px solid;
       border-radius: 5px;
@@ -236,28 +226,37 @@ nav {
       color: black;
       box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
     }
+
+    .project:nth-of-type(2n){
+      flex-direction: row-reverse;
+    }
+
     .project:last-of-type{
       border-bottom: none;
     }
+
     .project {
       display: flex;
       flex-direction: row;
       align-items: center;
-      // margin: 4vh 0;
       padding: 4vh 0;
       border-bottom: solid 3px $accentColor;
+
       .project-text {
         margin: 0 3vw;
         display: flex;
         flex-direction: column;
         align-items: center;
+
         .external-links{
           display: flex;
         }
       }
+
       .project-image {
         max-width: 50vw;
         border-radius: 10px;
+        box-shadow:  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
       }
     }
   }
@@ -272,7 +271,7 @@ footer{
   flex-direction: column;
   background-color: $primaryColor;
   color: $secondaryColor;
-  
+
   #contact{
     display: flex;
     flex-direction: row;
@@ -290,11 +289,13 @@ footer{
       flex-direction: row;
       justify-content: flex-start;
       width: 15vw;
-
+      align-items: flex-end;
 
       #footer-icon-email{
         display: flex;
+        height: 20px;
         min-height: 20px;
+        width: 20px;
         min-width: 20px;
         background-image: url(images/icons/email.png);
         background-size: cover;
@@ -303,11 +304,16 @@ footer{
         padding: 5px;
         background-color: $secondaryColor;
         margin: 0 5px;
-
+        border-radius: 2px;
+        &:hover {
+          border: 2px solid $accentColor;
+        }
       }
       #footer-icon-linked{
         display: flex;
+        height: 20px;
         min-height: 20px;
+        width: 20px;
         min-width: 20px;
         background-image: url(images/icons/linked-in.png);
         background-size: cover;
@@ -316,6 +322,10 @@ footer{
         padding: 5px;
         background-color: none;
         margin: 0 5px 0 15px;
+        border-radius: 2px;
+        &:hover {
+          border: 2px solid $accentColor;
+        }
       }
     }
   }
@@ -334,4 +344,69 @@ footer{
 
 #star-wars {
   font-family: 'Star Jedi', arial;
+}
+
+@media only screen and (max-width: 1024px) {
+  body{
+    font-size: larger;
+  }
+  #portfolio #projects {
+    .project{
+      flex-direction: column-reverse;
+      .project-image {
+        max-width: 80vw;
+      }
+    }
+    .project:nth-of-type(2n) {
+      flex-direction: column-reverse;
+    }
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  nav{
+    flex-direction: column;
+  }
+  #about-me{
+    margin-top: 30vh;
+  }
+}
+
+
+@media only screen and (max-width: 602px) {
+  
+
+  #portfolio #projects {
+  .project{
+    flex-direction: column-reverse;
+  }
+  .project:nth-of-type(2n) {
+    flex-direction: column-reverse;
+  }
+}
+}
+
+@media only screen and (max-width: 480px) {
+  nav{
+    div:last-of-type{
+      width:180px;
+      ul{justify-content: center;
+        p:nth-of-type(2){
+          display: none;
+        }
+      }
+      
+    }
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #about-me{
+    margin-top: 30vh;
+  }
+
+  #portfolio #projects .project{
+    flex-direction: column-reverse;
+  }
 }

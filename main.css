@@ -10,6 +10,7 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin: 0px;
 }
 
 main {
@@ -25,6 +26,11 @@ main {
           align-items: center;
   top: 20vh;
   bottom: 15vh;
+}
+
+ul {
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 
 h3 {
@@ -207,17 +213,13 @@ nav div #header-buttons a:hover {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  max-height: 10vh;
-  max-width: 30vw;
-  font-size: 16px;
+  width: 100px;
   padding: 4px 8px;
   margin: 5px;
-  color: #000;
 }
 
 #technologies #all-skills #technologies-list-container #technologies-list .tech-icon .tech-image {
-  max-width: 30vw;
-  max-height: 10vh;
+  width: 100px;
 }
 
 #technologies #all-skills #soft-container {
@@ -228,6 +230,13 @@ nav div #header-buttons a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 80vw;
 }
 
 #technologies #all-skills #soft-container #soft-skills-container {
@@ -250,16 +259,17 @@ nav div #header-buttons a:hover {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
   list-style-type: none;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
 }
 
 #technologies #all-skills #soft-container #soft-skills-container #soft-skills-list .soft-icon {
   list-style-type: none;
-  margin: 20px;
+  margin: 10px;
   border-bottom: #97743A 2px solid;
   font-size: larger;
 }
@@ -298,6 +308,13 @@ nav div #header-buttons a:hover {
   color: black;
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
           box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#portfolio #projects .project:nth-of-type(2n) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 #portfolio #projects .project:last-of-type {
@@ -342,6 +359,8 @@ nav div #header-buttons a:hover {
 #portfolio #projects .project .project-image {
   max-width: 50vw;
   border-radius: 10px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 footer {
@@ -394,13 +413,18 @@ footer #contact #footer-icon-container {
       -ms-flex-pack: start;
           justify-content: flex-start;
   width: 15vw;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 footer #contact #footer-icon-container #footer-icon-email {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 20px;
   min-height: 20px;
+  width: 20px;
   min-width: 20px;
   background-image: url(images/icons/email.png);
   background-size: cover;
@@ -409,13 +433,20 @@ footer #contact #footer-icon-container #footer-icon-email {
   padding: 5px;
   background-color: white;
   margin: 0 5px;
+  border-radius: 2px;
+}
+
+footer #contact #footer-icon-container #footer-icon-email:hover {
+  border: 2px solid #97743A;
 }
 
 footer #contact #footer-icon-container #footer-icon-linked {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  height: 20px;
   min-height: 20px;
+  width: 20px;
   min-width: 20px;
   background-image: url(images/icons/linked-in.png);
   background-size: cover;
@@ -424,6 +455,11 @@ footer #contact #footer-icon-container #footer-icon-linked {
   padding: 5px;
   background-color: none;
   margin: 0 5px 0 15px;
+  border-radius: 2px;
+}
+
+footer #contact #footer-icon-container #footer-icon-linked:hover {
+  border: 2px solid #97743A;
 }
 
 footer .footer-spacer {
@@ -439,5 +475,79 @@ footer .footer-spacer {
 
 #star-wars {
   font-family: 'Star Jedi', arial;
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: larger;
+  }
+  #portfolio #projects .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #portfolio #projects .project .project-image {
+    max-width: 80vw;
+  }
+  #portfolio #projects .project:nth-of-type(2n) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #about-me {
+    margin-top: 30vh;
+  }
+}
+
+@media only screen and (max-width: 602px) {
+  #portfolio #projects .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #portfolio #projects .project:nth-of-type(2n) {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  nav div:last-of-type {
+    width: 180px;
+  }
+  nav div:last-of-type ul {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  nav div:last-of-type ul p:nth-of-type(2) {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  #about-me {
+    margin-top: 30vh;
+  }
+  #portfolio #projects .project {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 /*# sourceMappingURL=main.css.map */
